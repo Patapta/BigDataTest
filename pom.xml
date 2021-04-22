@@ -17,6 +17,7 @@
         <spark.version>3.1.1</spark.version>
         <hadoop.version>2.6.0-cdh5.16.2</hadoop.version>
         <mysql.version>5.1.47</mysql.version>
+        <hbase.version>1.2.0-cdh5.16.2</hbase.version>
     </properties>
 
     <repositories>
@@ -39,6 +40,11 @@
             <version>${hadoop.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.tools.version}</artifactId>
             <version>${spark.version}</version>
@@ -57,6 +63,21 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-server</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-common</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
         </dependency>
     </dependencies>
 
